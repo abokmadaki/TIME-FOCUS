@@ -20,9 +20,8 @@ function showTime() {
 
     // Output Time 
     time.innerHTML = `
-    ${hour}<span>:</span>${addZero(minutes)}<span>:</span> ${addZero(seconds)}${showAmPm ? amPm : ''}
+    ${hour}<span>:</span>${addZero(minutes)}<span>:</span>${addZero(seconds)}${showAmPm ? amPm : ''}
     `;
-    setInterval(showTime, 1000);
 } 
 
 // Add Zeros
@@ -105,7 +104,7 @@ focusDisplay.addEventListener('keypress', setFocus)
 focusDisplay.addEventListener('blur', setFocus)
 
 // Run
-showTime();
+setInterval(showTime, 1000);
 setBgGreet();
 getName();
 getFocus();
